@@ -1,0 +1,16 @@
+.graph-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.graph-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.graph {
+    width: 100%; /* Adjust as needed */
+    height: 300px; /* Adjust as needed */
+}

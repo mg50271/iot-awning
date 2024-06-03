@@ -1,0 +1,68 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* Set body font and background color */
+body {
+  font-family: 'Roboto', sans-serif; /* Use Roboto font for better readability */
+  background-color: #f8f9fa; /* Light gray background color */
+}
+
+/* Set maximum width for main content */
+.container {
+  max-width: 800px; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center the content horizontally */
+  padding: 20px; /* Add some padding around the content */
+}
+
+/* Style headings */
+h1, h2, h3 {
+  color: #333; /* Dark gray heading color */
+}
+
+/* Style buttons */
+.btn-primary {
+  background-color: #007bff; /* Blue primary button color */
+  border-color: #007bff; /* Blue border color */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  border-color: #0056b3; /* Darker blue border on hover */
+}
+
+/* Add spacing between buttons */
+.btn {
+  margin-right: 10px; /* Add spacing between buttons */
+}
+
+/* Style links */
+a {
+  color: #007bff; /* Blue link color */
+  text-decoration: none; /* Remove underline from links */
+}
+
+a:hover {
+  text-decoration: underline; /* Underline links on hover */
+}
+
