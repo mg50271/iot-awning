@@ -2,16 +2,20 @@ import React, { useState } from 'react';
 import { auth } from '../firebaseConfig';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { Form, Button, Container } from 'react-bootstrap';
+import { Route, Routes, useNavigate } from 'react-router-dom';
+import  { Link } from 'react-router-dom'
+
 
 const LogIn = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
+    const navigate = useNavigate();
     const handleSubmit = (e) => {
         e.preventDefault();
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                console.log('User logged in:', userCredential.user);
+                
+                navigate('../user/' + userCredential.user.uid, { replace: true });
             })
             .catch((error) => {
                 console.error('Error logging in:', error);

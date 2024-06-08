@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { auth } from '../firebaseConfig';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+//import { auth } from '../firebaseConfig';
+import { createUserWithEmailAndPassword, getAuth } from 'firebase/auth';
 import { Form, Button, Container } from 'react-bootstrap';
 
 const SignUp = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
+    const auth = getAuth();
     const handleSubmit = (e) => {
         e.preventDefault();
         createUserWithEmailAndPassword(auth, email, password)

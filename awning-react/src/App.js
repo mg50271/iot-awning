@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import SignUp from './components/SignUp';
 import LogIn from './components/LogIn';
 import WindGraph from './components/WindGraph';
+import Users from './components/User';
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                     <Route path="/signup" element={<SignUp />} />
                     <Route path="/login" element={<LogIn />} />
                     <Route path="/wind-graph" element={<WindGraph />} />
+                    <Route path="/user/:userId" element={<Users />} />
                 </Routes>
                 <Footer />
             </div>
