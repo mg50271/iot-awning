@@ -6,7 +6,16 @@ import { useState, useEffect, getUsers } from 'react';
 
 const NavBarLoggedIn = () => {
     
-    
+    const handleLogOut = () => {
+        signOut(auth)
+            .then(() => {
+                
+                navigate('../', { replace: true });
+            })
+            .catch((error) => {
+                console.error('Error logging out:', error);
+            });
+    };
     const auth = getAuth();
         return (
             <Navbar bg="dark" variant="dark" expand="lg">
@@ -25,6 +34,7 @@ const NavBarLoggedIn = () => {
                             <Nav.Link as={NavLink} to="/" exact="true">Home</Nav.Link>
                             
                             <Nav.Link as={NavLink} to="/wind-graph">Wind Graph</Nav.Link>
+                            <Nav.Link as={NavLink} to="/user/" exact="true">Home</Nav.Link>
                             
                             <Nav.Link as={NavLink} to="/logout">Logout</Nav.Link> 
                             
