@@ -7,50 +7,20 @@ import { Form, Button} from 'react-bootstrap';
 
 const Users = () => {
     const auth = getAuth();
-    const [showForm, setShowForm] = useState(false);
-
-    const showForm1 = () => {
-    setShowForm(!showForm);
-    if(showForm===true) {
-        setText("Dodaj tendu");
-    }
-    else{ setText("Poništi");}
-    }
-    const [text, setText] = useState("Dodaj tendu");
+    
         
    
     return (
         <Container className="mt-5">
             <Row className="justify-content-md-center">
                 <Col md="auto">
-                    <h1>Your account</h1>
+                    <h1 style={{fontFamily:'Josefin Sans'}}>Your awnings</h1>
                     <div>
                     <form>
-                    <Button variant="contained" style={{backgroundColor: "black", color:"white"}} onClick={showForm1}>{text}</Button>
+                    <Button variant="contained" style={{backgroundColor: "black", color:"white"}}>Synchronize awnings</Button>
                     </form>
 
-                    {showForm && (
-                    <form style = {{borderColor: "black", border:'10px'}}>
-                        <Container>
-                        <p>Naziv tende: </p>
-                        <input name="query" />
-                        <p style={{marginTop: '20px'}}> Lokacija tende: </p>
-                        <select name="cars" id="cars" style={{width:'190px', height:'30px'}}>
-                            <option value="volvo">Volvo</option>
-                            <option value="saab">Saab</option>
-                            <option value="mercedes">Mercedes</option>
-                            <option value="audi">Audi</option>
-                        </select>
-                        <div style={{marginTop:'20px'}}>
-                        <Button variant="contained" style={{backgroundColor: "black", color:"white"}}>Spremi</Button>
-                        </div>
-                            
-                        
-                        </Container>
-                      
-                    </form>
                     
-                    )}
                     </div>
                     
                 </Col>

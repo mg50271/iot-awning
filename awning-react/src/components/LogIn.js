@@ -15,10 +15,13 @@ const LogIn = () => {
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 
-                navigate('../user/' + userCredential.user.uid, { replace: true });
+                navigate('../user', { replace: true });
             })
             .catch((error) => {
-                console.error('Error logging in:', error);
+                return(
+                    <p> Wrong email or password. Try again!</p>
+                )
+                
             });
     };
 
