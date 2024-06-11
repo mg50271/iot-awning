@@ -19,20 +19,20 @@ const LogOut = () => {
 
     const handleNo = () => {
         
-            navigate('../user/' + auth.currentUser.uid, { replace: true });
+            navigate('../user', { replace: true });
             
             
     };
 
     return (
         <div>
-            <p>
+            <p style= {{fontFamily:'Josefin Sans', fontSize: "25px", marginTop: "50px", marginBottom: "30px"}}>
             Are you sure you want to log out?
             </p>
-            <Button variant="secondary" onClick={handleLogOut}>
+            <Button variant="secondary" onClick={handleLogOut} style={{marginRight: "10px"}}>
             Yes
         </Button>
-        <Button variant = "secondary" onClick = {handleNo}>No</Button>
+        <Button variant = "secondary" onClick = {handleNo} style={{marginLeft:"10px"}}>No</Button>
         </div>
         
     );
