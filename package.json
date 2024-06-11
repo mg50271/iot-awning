@@ -1,5 +1,8 @@
 {
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/material": "^5.15.19",
     "bootstrap": "^5.3.3",
     "buffer": "^6.0.3",
     "chart.js": "^4.4.3",
@@ -7,11 +10,14 @@
     "crypto-browserify": "^3.12.0",
     "django": "^1.0.0",
     "dotenv": "^16.4.5",
+    "eslint-config-react-app": "^7.0.1",
     "firebase": "^10.12.2",
     "import": "^0.0.6",
     "os": "^0.1.2",
     "path": "^0.12.7",
     "process": "^0.11.10",
+    "python": "^0.0.4",
+    "python3": "^0.0.1",
     "react-bootstrap": "^2.10.2",
     "react-router-dom": "^6.23.1",
     "react-scripts": "^5.0.1",

@@ -12,6 +12,7 @@ import Users from './components/User';
 import LogOut from './components/LogOut';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useState, useEffect, getUsers } from 'react';
+import AboutUs from './components/AboutUs';
 //import * as firebase from 'firebase';
 //import NavBarLoggedIn from "./components/NavBarLoggedIn";
 
@@ -49,6 +50,7 @@ function App() {
                     <Route path="/logout" element={<LogOut />} />
                     <Route path="/wind-graph" element={<WindGraph />} />
                     <Route path="/user" element={<Users />} />
+                    <Route path="/aboutus" element={<AboutUs />} />
                 </Routes>
                 <Footer />
             </div>

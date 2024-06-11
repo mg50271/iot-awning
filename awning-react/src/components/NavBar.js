@@ -60,6 +60,7 @@ const NavBarLoggedIn = () => {
                           
                         
                             <Nav.Link as={NavLink} to="/" exact="true">Home</Nav.Link>
+                            <Nav.Link as={NavLink} to="/aboutus" >About Us</Nav.Link>
 
                             <Nav.Link as={NavLink} to="/user">Profile</Nav.Link>
                             
