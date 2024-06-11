@@ -2,16 +2,18 @@ import React, { useState } from 'react';
 //import { auth } from '../firebaseConfig';
 import { createUserWithEmailAndPassword, getAuth } from 'firebase/auth';
 import { Form, Button, Container } from 'react-bootstrap';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const auth = getAuth();
+    const navigate = useNavigate();
     const handleSubmit = (e) => {
         e.preventDefault();
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                console.log('User signed up:', userCredential.user);
+                navigate('../user', { replace: true });
             })
             .catch((error) => {
                 console.error('Error signing up:', error);
