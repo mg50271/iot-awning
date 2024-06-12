@@ -8,7 +8,7 @@ class AwningSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Awning
-        fields = ['name', 'location', 'is_folded', 'created_at', 'owner']
+        fields = ['name', 'location','owner', 'is_folded', 'created_at']
 
 
 class UserSerializer(serializers.ModelSerializer):

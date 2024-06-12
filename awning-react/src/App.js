@@ -13,6 +13,7 @@ import LogOut from './components/LogOut';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useState, useEffect, getUsers } from 'react';
 import AboutUs from './components/AboutUs';
+import Awning from './components/Awning';
 //import * as firebase from 'firebase';
 //import NavBarLoggedIn from "./components/NavBarLoggedIn";
 
@@ -31,6 +32,8 @@ function App() {
             }
         })
   },[])
+
+  
 
 
   
@@ -51,6 +54,7 @@ function App() {
                     <Route path="/wind-graph" element={<WindGraph />} />
                     <Route path="/user" element={<Users />} />
                     <Route path="/aboutus" element={<AboutUs />} />
+                    <Route path="/awning/:id" element={<Awning />} />
                 </Routes>
                 <Footer />
             </div>
